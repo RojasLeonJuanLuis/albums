@@ -6,12 +6,17 @@
 
 import React, { Component } from 'react';
 import Header from './src/components/header'
+import AlbumList from './src/components/album-list'
+import { View } from 'react-native'
 
 
 export default class App extends Component<{}> {
   render() {
     return (
-      <Header headerText={'Albums'} />
+      <View>
+        <Header headerText={'Albums'} />
+        <AlbumList />
+      </View>
     )
   }
 }
