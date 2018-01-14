@@ -3,8 +3,10 @@ import { View, Text } from 'react-native'
 
 class AlbumList extends Component {
 
-  componentWillMount() {
-    console.log('component componentWillMount');
+  async componentWillMount() {
+    const response = await fetch('https://rallycoding.herokuapp.com/api/music_albums')
+    const data = await response.json()
+    console.log(data);
   }
 
   render() {
